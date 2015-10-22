@@ -1,2 +1,9 @@
 ElasticSearch Watcher 监控报警
 
+安装之前可能是需要把ElasticSearch停掉， 我开着的时候没安装成功
+安装watcher :  到ElasticSearch 安装目录下，执行:  bin/plugin install elasticsearch/license/latest
+                                                  bin/plugin install elasticsearch/watcher/latest
+                                                  
+运行ElasticSearch :  ./elasticsearch     后台运行: ./elasticsearch -d
+
+验证watcher安装: curl -XGET 'http://localhost:9200/_watcher/stats?pretty' 
